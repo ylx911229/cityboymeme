@@ -92,6 +92,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q4Z8QQ93M3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          dataLayer.push('js', new Date());
+          dataLayer.push('config', 'G-Q4Z8QQ93M3');
+        </script>
+        <link rel="canonical" href={siteUrl} />
+      </head>
       <body className={`${inter.className} antialiased`}>
         {children}
       </body>
