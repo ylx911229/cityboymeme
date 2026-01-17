@@ -198,6 +198,14 @@ const FabricCanvas = forwardRef<FabricCanvasRef, FabricCanvasProps>(
         }
 
         if (updates.style !== undefined) {
+          // Clear all style-related properties first
+          textObj.set({
+            stroke: undefined,
+            strokeWidth: 0,
+            backgroundColor: '',
+            padding: 0,
+          })
+
           const style = getTextStyle(updatedElement as TextElement)
 
           // Only update style-related properties, not transform properties
