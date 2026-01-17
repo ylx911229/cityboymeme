@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useCallback, useEffect } from 'react'
 import Image from 'next/image'
 import { FaTwitter, FaReddit, FaPinterest, FaLink, FaDownload, FaPlus, FaTrash } from 'react-icons/fa'
 import FabricCanvas, { FabricCanvasRef, TextElement } from './FabricCanvas'
@@ -26,16 +26,23 @@ export default function MemeEditor() {
   ])
   const [selectedTextId, setSelectedTextId] = useState<string | null>('1')
   const [copySuccess, setCopySuccess] = useState(false)
+  const [canvasReady, setCanvasReady] = useState(false)
   const canvasRef = useRef<FabricCanvasRef>(null)
 
   const selectedText = textElements.find(t => t.id === selectedTextId)
 
-  const handleCanvasReady = () => {
-    // Initialize canvas with text elements when canvas is ready
-    textElements.forEach(element => {
-      canvasRef.current?.addText(element)
-    })
-  }
+  const handleCanvasReady = useCallback(() => {
+    setCanvasReady(true)
+  }, [])
+
+  // Initialize canvas with text elements when canvas is ready
+  useEffect(() => {
+    if (canvasReady) {
+      textElements.forEach(element => {
+        canvasRef.current?.addText(element)
+      })
+    }
+  }, [canvasReady]) // Only run once when canvas becomes ready
 
   const updateText = (id: string, updates: Partial<TextElement>) => {
     setTextElements(prev => prev.map(t => t.id === id ? { ...t, ...updates } : t))
@@ -65,9 +72,9 @@ export default function MemeEditor() {
     }
   }
 
-  const handleTextSelect = (id: string | null) => {
+  const handleTextSelect = useCallback((id: string | null) => {
     setSelectedTextId(id)
-  }
+  }, [])
 
   const handleDownload = async () => {
     const dataURL = canvasRef.current?.exportAsDataURL()
