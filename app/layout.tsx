@@ -9,7 +9,7 @@ const inter = Inter({
 
 const siteUrl = "https://cityboymeme.com";
 const siteName = "City Boy Meme Generator";
-const siteDescription = "Free online City Boy meme generator - create hilarious City Boy memes in seconds. Add custom text, stickers, and download instantly. No signup required!";
+const siteDescription = "Create hilarious City Boy memes instantly with our free online generator. Add custom text, choose fonts and colors. Download high-quality memes. No signup!";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -24,8 +24,6 @@ export const metadata: Metadata = {
     "free meme maker",
     "online meme creator",
     "city boy meme maker",
-    "create memes",
-    "funny memes",
     "meme templates"
   ],
   authors: [{ name: "City Boy Meme" }],
@@ -74,7 +72,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
       { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
@@ -91,9 +92,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="canonical" href="https://cityboymeme.com/" />
-      </head>
       <body className={`${inter.className} antialiased`}>
         {children}
       </body>
