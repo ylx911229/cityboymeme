@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { FaTwitter, FaReddit, FaPinterest, FaLink, FaDownload, FaPlus, FaTrash } from 'react-icons/fa'
 import FabricCanvas, { FabricCanvasRef, TextElement } from './FabricCanvas'
 
@@ -88,7 +89,7 @@ export default function MemeEditor() {
 
   const handleShare = (platform: string) => {
     const url = 'https://cityboymeme.com'
-    const text = 'Check out this hilarious City Boy meme I created!'
+    const text = 'Check out this hilarious meme I created!'
 
     switch (platform) {
       case 'twitter':
@@ -115,13 +116,14 @@ export default function MemeEditor() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <Image src="/logo.png" alt="City Boy Meme Logo" width={50} height={50} className="rounded-lg" />
+              <Image src="/logo.png" alt="City Boy Meme featuring shocked expression character - Free generator" width={50} height={50} className="rounded-lg" />
               <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 City Boy Meme
               </span>
             </div>
             <div className="hidden md:flex gap-6">
               <a href="#generator" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Generator</a>
+              <Link href="/what-is-city-boy-meme" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">What is City Boy?</Link>
               <a href="#examples" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Examples</a>
               <a href="#faq" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">FAQ</a>
             </div>
@@ -134,9 +136,16 @@ export default function MemeEditor() {
         <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
           City Boy Meme Generator
         </h1>
-        <p className="text-base md:text-xl text-gray-600 max-w-4xl mx-auto">
-          Lightning Fast, Free, Online Meme Generator and Meme Maker. Use the City Boy meme template to create hilarious City Boy memes in seconds with custom text, fonts, and colors. Perfect for sharing viral content!
+        <p className="text-base md:text-xl text-gray-600 max-w-4xl mx-auto mb-4">
+          The #1 City Boy Meme Generator - Lightning-Fast, Free, and Online. Create viral City Boy Meme in seconds with custom text, fonts, and colors. Perfect for TikTok, Twitter, Instagram, and all social media!
         </p>
+        <Link
+          href="/what-is-city-boy-meme"
+          className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm md:text-base hover:underline"
+        >
+          <span>📚 Learn about the origins and why it's viral in 2026</span>
+          <span>→</span>
+        </Link>
       </section>
 
       {/* Meme Editor */}
@@ -314,53 +323,53 @@ export default function MemeEditor() {
         <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 space-y-6">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900">What is a City Boy Meme?</h2>
           <p className="text-gray-600 leading-relaxed">
-            The City Boy meme is a hilarious internet phenomenon featuring a character with an exaggerated shocked expression wearing a distinctive hat. This viral City Boy meme template has taken social media platforms like Twitter, Instagram, TikTok, and Reddit by storm, becoming one of the most popular reaction memes for expressing surprise, disbelief, or dramatic responses to everyday situations. The City Boy meme format is perfect for creating relatable content about urban life, modern experiences, and humorous observations that resonate with millions of social media users worldwide.
+            This hilarious internet phenomenon features a character with an exaggerated shocked expression wearing a distinctive hat. The viral template has taken social media platforms like Twitter, Instagram, TikTok, and Reddit by storm, becoming one of the most popular reaction formats for expressing surprise, disbelief, or dramatic responses to everyday situations. It's perfect for creating relatable content about urban life, modern experiences, and humorous observations that resonate with millions worldwide.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Our City Boy meme generator allows you to create custom City Boy memes instantly with professional-quality results. Add your own funny text, choose from multiple fonts including Impact and Arial, select vibrant colors, adjust text sizes, and download your creation in high quality PNG format. Whether you're making City Boy memes for Twitter threads, Instagram stories, Reddit posts, or TikTok videos, our free online meme maker gives you all the creative tools you need to go viral. The City Boy meme editor features an intuitive interface that works perfectly on desktop computers, tablets, and mobile phones, making it easy to create City Boy memes anywhere, anytime.
+            Originating from a <Link href="/what-is-city-boy-meme" className="text-blue-600 hover:underline font-medium">memorable Gravity Falls scene</Link>, this format has evolved into one of 2026's most viral trends. Our generator allows you to create custom versions instantly with professional-quality results. Add your own funny text, choose from multiple fonts including Impact and Arial, select vibrant colors, adjust text sizes, and download your creation in high quality PNG format. Whether you're creating content for Twitter threads, Instagram stories, Reddit posts, or TikTok videos, our free online tool gives you everything you need to go viral.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Creating City Boy memes has never been easier or more fun. Simply type your hilarious text, customize the font style and color scheme, choose your preferred layout, and share your creative City Boy meme masterpiece with friends and followers. No watermarks, no account registration required, no premium subscription fees - just pure City Boy meme-making enjoyment. Join thousands of City Boy meme creators worldwide who use our platform daily to craft viral content that gets likes, shares, and retweets across social media. The City Boy meme trend continues to grow, and with our free City Boy meme generator, you can be part of this exciting internet culture phenomenon.
+            Creating viral content has never been easier or more fun. Simply type your hilarious text, customize the font style and color scheme, choose your preferred layout, and share your masterpiece with friends and followers. No watermarks, no account registration required, no premium subscription fees - just pure meme-making enjoyment. Join thousands of creators worldwide who use our platform daily to craft content that gets likes, shares, and retweets across social media. <Link href="/what-is-city-boy-meme" className="text-blue-600 hover:underline font-medium">Learn more about the phenomenon</Link> and why it's trending in 2026.
           </p>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section id="faq" className="max-w-4xl mx-auto px-4 py-12 md:py-16">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">How to Create City Boy Memes</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">How to Create City Boy Meme - Complete Guide</h2>
         <div className="space-y-4">
           {[
             {
-              q: 'How do I add text to my City Boy meme?',
-              a: 'Click the "Text" button in the tools panel to start customizing your City Boy meme, then type your message in the text field. You can customize the font family, text color, size, and style to make your City Boy meme stand out from the crowd. The City Boy meme generator provides real-time preview functionality so you can see your changes instantly as you edit your masterpiece. Choose from popular meme fonts like Impact for that classic City Boy meme look, or select Arial, Comic Sans MS, Georgia, or Courier New for different creative effects that match your City Boy meme vision.'
+              q: 'What is a City Boy Meme?',
+              a: 'The City Boy Meme is a viral internet format featuring a character with an exaggerated shocked expression wearing a distinctive hat. Originating from Gravity Falls, this City Boy meme became one of 2026\'s most popular reaction formats on TikTok, Twitter, Instagram, and Reddit for expressing surprise, disbelief, or dramatic responses to everyday urban life situations. Our City Boy Meme Generator makes it easy to create your own custom versions instantly.'
             },
             {
-              q: 'Can I change the text position and layout?',
-              a: 'Absolutely! Our City Boy meme generator gives you full control over text positioning and layout options. You can drag and move text anywhere on your City Boy meme canvas to create the perfect composition. This flexibility makes our City Boy meme maker perfect for any type of City Boy meme format you want to create, whether you prefer centered text, corner placement, or custom positioning. The layout options help you match different City Boy meme styles and ensure your text is always readable and impactful for maximum viral potential.'
+              q: 'How do I create a City Boy Meme?',
+              a: 'Creating a City Boy Meme is simple with our generator: 1) Click the "Text" button to start editing, 2) Type your message in the text field, 3) Customize the font family (Impact recommended for classic City Boy meme style), text color, and size, 4) Choose your preferred layout (center, top, bottom, or top+bottom), 5) Click "Download Meme" to save your City Boy meme as a high-quality PNG. Our generator provides real-time preview so you can see your City Boy meme as you create it.'
             },
             {
-              q: 'How do I download and share my City Boy meme?',
-              a: 'After creating your City Boy meme masterpiece with custom text and styling, click the "Share" button, then select "Download Meme" to save your City Boy meme as a high-quality PNG image file. Your City Boy meme will be ready to share on social media platforms like Twitter, Instagram, Facebook, Reddit, TikTok, and more. You can also use our one-click share buttons to post your City Boy meme directly to Twitter, Reddit, or Pinterest, or copy the link to share your City Boy meme creation anywhere online with friends and followers.'
+              q: 'Can I customize the position and layout of text on my City Boy Meme?',
+              a: 'Absolutely! Our City Boy Meme Generator gives you full control over text positioning and layout options. You can drag and move text anywhere on the canvas to create the perfect City Boy meme composition. This flexibility makes it perfect for any type of City Boy meme format you want to create, whether you prefer centered text, corner placement, or custom positioning for maximum viral potential.'
             },
             {
-              q: 'Is the City Boy meme generator really completely free?',
-              a: 'Yes! Our City Boy meme generator is 100% free to use with absolutely no hidden costs, no annoying watermarks on your City Boy meme images, and no account signup or registration required. Create unlimited City Boy memes and share them anywhere you want without any restrictions whatsoever. We believe everyone should have access to quality City Boy meme-making tools for free, which is why our City Boy meme platform is completely open and accessible to all City Boy meme enthusiasts and creators worldwide who want to make viral City Boy meme content.'
+              q: 'How do I download and share my City Boy Meme?',
+              a: 'After creating your City Boy meme masterpiece with custom text and styling, click the "Share" button, then select "Download Meme" to save it as a high-quality PNG image file. Your City Boy meme will be ready to share on social media platforms like Twitter, Instagram, Facebook, Reddit, TikTok, and more. You can also use our one-click share buttons to post your City Boy meme directly to Twitter, Reddit, or Pinterest, or copy the link to share anywhere online with friends and followers.'
             },
             {
-              q: 'What makes a great and viral City Boy meme?',
-              a: 'The best City Boy memes combine relatable everyday situations with the City Boy character\'s iconic shocked expression for maximum comedic effect. Use bold, highly readable text that contrasts well with the City Boy meme template background. Keep your City Boy meme message concise, funny, and easy to understand at a glance. Popular City Boy meme themes include unexpected reactions, dramatic life reveals, humorous takes on modern urban living, gen z culture, and surprising everyday observations. The more relatable and clever your City Boy meme text, the more likely your City Boy meme is to go viral and get shared across social media platforms.'
+              q: 'Is this City Boy Meme Generator really free?',
+              a: 'Yes! Our City Boy Meme Generator is 100% free to use with absolutely no hidden costs, no annoying watermarks on your City Boy meme images, and no account signup or registration required. Create unlimited City Boy Meme and share them anywhere you want without any restrictions whatsoever. We believe everyone should have access to quality City Boy meme-making tools for free, which is why our platform is completely open and accessible to all enthusiasts and creators worldwide who want to make viral City Boy meme content.'
             },
             {
-              q: 'Can I use my City Boy memes for commercial purposes?',
-              a: 'While you can freely create and share City Boy memes for personal entertainment and social media posting, commercial usage for advertising or business purposes may require additional permissions and consideration of copyright laws. Always respect intellectual property rights, fair use guidelines, and trademark regulations when using meme templates for any commercial business activities or paid promotions.'
+              q: 'What makes a great viral City Boy Meme?',
+              a: 'The best City Boy Meme combine relatable everyday situations with the character\'s iconic shocked expression for maximum comedic effect. Use bold, highly readable text that contrasts well with the City Boy meme template background. Keep your message concise, funny, and easy to understand at a glance. Popular City Boy meme themes include unexpected reactions, dramatic life reveals, humorous takes on modern urban living, gen z culture, and surprising everyday observations. The more relatable and clever your City Boy meme text, the more likely it is to go viral and get shared across social media platforms. For more inspiration and background, check out our complete guide on what the City Boy meme is and why it\'s trending.'
             },
             {
-              q: 'Does the meme generator work on mobile phones?',
-              a: 'Yes! Our City Boy meme generator features a fully responsive design that works perfectly on all devices including smartphones, tablets, and desktop computers. The mobile-friendly interface makes it easy to create hilarious memes on the go, whether you\'re using an iPhone, Android phone, iPad, or any other mobile device. All features including text editing, font selection, color customization, and downloading work seamlessly across all screen sizes.'
+              q: 'Can I use my City Boy Meme for commercial purposes?',
+              a: 'While you can freely create and share City Boy Meme for personal entertainment and social media posting, commercial usage for advertising or business purposes may require additional permissions and consideration of copyright laws. Always respect intellectual property rights, fair use guidelines, and trademark regulations when using City Boy meme templates for any commercial business activities or paid promotions.'
             },
             {
-              q: 'What font should I use for City Boy memes?',
-              a: 'Impact font is the traditional choice for classic meme text styling and is highly recommended for City Boy memes. It provides excellent readability and that authentic meme aesthetic everyone recognizes. However, our generator also offers Arial, Comic Sans MS, Georgia, and Courier New fonts for creative variety. Pair your chosen font with the "outlined" text style for maximum visibility and that professional meme look.'
+              q: 'Does the City Boy Meme Generator work on mobile phones?',
+              a: 'Yes! Our City Boy Meme Generator features a fully responsive design that works perfectly on all devices including smartphones, tablets, and desktop computers. The mobile-friendly interface makes it easy to create hilarious City Boy Meme on the go, whether you\'re using an iPhone, Android phone, iPad, or any other mobile device. All features including text editing, font selection, color customization, and downloading work seamlessly across all screen sizes for the best City Boy meme creation experience.'
             }
           ].map((item, i) => (
             <details key={i} className="bg-white rounded-xl shadow-md p-4 md:p-6 cursor-pointer group">
@@ -376,38 +385,38 @@ export default function MemeEditor() {
 
       {/* Features Section */}
       <section className="max-w-6xl mx-auto px-4 py-12 md:py-16">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">Why Use Our City Boy Meme Generator?</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">Why Our City Boy Meme Generator is #1</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {[
             {
               icon: '⚡',
               title: 'Lightning Fast Creation',
-              description: 'Create hilarious City Boy memes in seconds with our intuitive drag-and-drop interface. No complicated software downloads or steep learning curves - just instant meme magic at your fingertips.'
+              description: 'Create hilarious content in seconds with our intuitive drag-and-drop interface. No complicated software downloads or steep learning curves - just instant meme magic at your fingertips.'
             },
             {
               icon: '🎨',
               title: 'Full Creative Customization',
-              description: 'Choose from multiple professional fonts, vibrant color palettes, and text styling options. Adjust sizes, positions, and layouts to create the perfect City Boy meme for any viral situation.'
+              description: 'Choose from multiple professional fonts, vibrant color palettes, and text styling options. Adjust sizes, positions, and layouts to create the perfect viral content for any situation.'
             },
             {
               icon: '📱',
               title: 'Mobile Friendly Design',
-              description: 'Create professional memes on any device - desktop computer, tablet, or smartphone. Our fully responsive meme generator works flawlessly wherever you are, whenever inspiration strikes.'
+              description: 'Create professional content on any device - desktop computer, tablet, or smartphone. Our fully responsive generator works flawlessly wherever you are, whenever inspiration strikes.'
             },
             {
               icon: '💯',
               title: 'No Watermarks Ever',
-              description: 'Download clean, professional-quality meme images without any annoying watermarks or branding. Your City Boy creations are 100% yours to share, post, and enjoy freely across all platforms.'
+              description: 'Download clean, professional-quality images without any annoying watermarks or branding. Your creations are 100% yours to share, post, and enjoy freely across all platforms.'
             },
             {
               icon: '🚀',
               title: 'Instant Social Sharing',
-              description: 'Share your viral memes directly to Twitter, Reddit, and Pinterest with one click, or download high-resolution PNG files for Instagram, TikTok, Facebook, and any other social platform. Go viral instantly!'
+              description: 'Share your viral creations directly to Twitter, Reddit, and Pinterest with one click, or download high-resolution PNG files for Instagram, TikTok, Facebook, and any other social platform. Go viral instantly!'
             },
             {
               icon: '🔒',
               title: 'Privacy First Approach',
-              description: 'No account registration required, no user tracking, no personal data collection. Create memes privately and securely without sharing any personal information or email addresses.'
+              description: 'No account registration required, no user tracking, no personal data collection. Create content privately and securely without sharing any personal information or email addresses.'
             }
           ].map((feature, i) => (
             <div key={i} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow h-full flex flex-col">
@@ -425,25 +434,26 @@ export default function MemeEditor() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Image src="/logo.png" alt="City Boy Meme" width={40} height={40} className="rounded-lg" />
+                <Image src="/logo.png" alt="City Boy Meme - Free online meme maker" width={40} height={40} className="rounded-lg" />
                 <span className="text-xl font-bold">City Boy Meme</span>
               </div>
               <p className="text-gray-400 text-sm md:text-base">
-                The best free online City Boy meme generator. Create, customize, and share hilarious viral memes in seconds.
+                The best free online generator. Create, customize, and share hilarious viral content in seconds.
               </p>
             </div>
             <div>
               <h3 className="font-bold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-gray-400 text-sm md:text-base">
-                <li><a href="#generator" className="hover:text-white transition-colors">Meme Generator</a></li>
+                <li><a href="#generator" className="hover:text-white transition-colors">Generator</a></li>
+                <li><Link href="/what-is-city-boy-meme" className="hover:text-white transition-colors">About the Meme</Link></li>
                 <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
                 <li><a href="https://cityboymeme.com" className="hover:text-white transition-colors">Privacy Policy</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold mb-4">Popular Keywords</h3>
+              <h3 className="font-bold mb-4">Popular Topics</h3>
               <div className="flex flex-wrap gap-2">
-                {['city boy meme', 'meme generator', 'free meme maker', 'meme creator'].map(tag => (
+                {['city boy meme', 'viral trends', 'free generator', 'tiktok'].map(tag => (
                   <span key={tag} className="px-3 py-1 bg-gray-800 rounded-full text-xs md:text-sm text-gray-300">
                     {tag}
                   </span>
@@ -454,7 +464,7 @@ export default function MemeEditor() {
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm md:text-base">
             <p>© 2026 City Boy Meme Generator. All rights reserved.</p>
             <p className="mt-2 text-xs md:text-sm">
-              Create viral memes with the most popular City Boy meme template. Free, fast, and fun meme making!
+              Create viral content with the most popular template. Free, fast, and fun!
             </p>
           </div>
         </div>
@@ -468,8 +478,9 @@ export default function MemeEditor() {
             '@context': 'https://schema.org',
             '@type': 'WebApplication',
             name: 'City Boy Meme Generator',
+            alternateName: 'City Boy Meme Maker',
             url: 'https://cityboymeme.com',
-            description: 'Free online City Boy meme generator - create hilarious City Boy memes in seconds with custom text, fonts, and colors.',
+            description: 'Free City Boy Meme Generator - create viral City Boy Meme instantly with custom text, fonts, and colors. The #1 online City Boy meme maker in 2026.',
             applicationCategory: 'Entertainment',
             operatingSystem: 'Any',
             offers: {
@@ -484,7 +495,66 @@ export default function MemeEditor() {
               bestRating: '5',
               worstRating: '1'
             },
-            keywords: 'city boy meme, meme generator, free meme maker, online meme creator, meme template, viral memes'
+            keywords: 'city boy meme, city boy meme generator, city boy meme maker, free meme generator, viral meme, meme creator, tiktok meme, trending meme 2026',
+            featureList: [
+              'Create City Boy Meme free',
+              'No watermarks on City Boy Meme',
+              'Instant City Boy meme download',
+              'Custom text for City Boy Meme'
+            ]
+          })
+        }}
+      />
+
+      {/* FAQPage Schema for Featured Snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is a City Boy Meme?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The City Boy Meme is a viral internet format featuring a character with an exaggerated shocked expression wearing a distinctive hat. Originating from Gravity Falls, this City Boy meme became one of 2026\'s most popular reaction formats on TikTok, Twitter, Instagram, and Reddit for expressing surprise, disbelief, or dramatic responses to everyday urban life situations.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'How do I create a City Boy Meme?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Creating a City Boy Meme is simple: 1) Open our free City Boy Meme Generator, 2) Add your custom text, 3) Choose fonts and colors, 4) Download your City Boy meme in high-quality PNG format. No signup required!'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Is the City Boy Meme Generator free?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes! Our City Boy Meme Generator is 100% free with no watermarks, no signup required, and unlimited usage. Create and download as many City Boy Meme as you want.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Why are City Boy Meme so popular in 2026?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'City Boy Meme exploded on TikTok, Twitter, and Instagram in 2026 because the shocked expression perfectly captures relatable reactions to modern life, gen z culture, and unexpected situations. The format\'s versatility makes it ideal for viral content.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Does the City Boy Meme Generator work on mobile?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes! Our City Boy Meme Generator works perfectly on all devices including smartphones, tablets, and desktop computers with a fully responsive design for creating City Boy Meme on the go.'
+                }
+              }
+            ]
           })
         }}
       />

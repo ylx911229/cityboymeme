@@ -56,14 +56,27 @@ const FabricCanvas = forwardRef<FabricCanvasRef, FabricCanvasProps>(
       // Load background image if provided
       if (backgroundImage) {
         fabric.Image.fromURL(backgroundImage, (img) => {
-          if (!img) return
+          // Check if canvas still exists (component might have unmounted)
+          if (!img || !fabricCanvasRef.current) return
 
-          img.scaleToWidth(canvasSize)
-          img.scaleToHeight(canvasSize)
+          const canvas = fabricCanvasRef.current
+
+          // Calculate scale to cover the entire canvas (like CSS object-fit: cover)
+          const scaleX = canvasSize / (img.width || 1)
+          const scaleY = canvasSize / (img.height || 1)
+          const scale = Math.max(scaleX, scaleY)
+
           img.set({
+            scaleX: scale,
+            scaleY: scale,
+            left: canvasSize / 2,
+            top: canvasSize / 2,
+            originX: 'center',
+            originY: 'center',
             selectable: false,
             evented: false,
           })
+
           canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas))
         }, { crossOrigin: 'anonymous' })
       }

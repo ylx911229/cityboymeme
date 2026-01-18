@@ -8,13 +8,13 @@ const inter = Inter({
 });
 
 const siteUrl = "https://cityboymeme.com";
-const siteName = "City Boy Meme Generator";
+const siteName = "City Boy Meme";
 const siteDescription = "Create hilarious City Boy memes instantly with our free online generator. Add custom text, choose fonts and colors. Download high-quality memes. No signup!";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "City Boy Meme Generator - Free Online Meme Maker",
+    default: "City Boy Meme - Free Online Meme Maker",
     template: "%s | City Boy Meme"
   },
   description: siteDescription,
