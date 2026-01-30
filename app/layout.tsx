@@ -9,22 +9,26 @@ const inter = Inter({
 
 const siteUrl = "https://cityboymeme.com";
 const siteName = "City Boy Meme";
-const siteDescription = "Create hilarious City Boy memes instantly with our free online generator. Add custom text, choose fonts and colors. Download high-quality memes. No signup!";
+const siteDescription = "Free city boy meme generator - Create viral city boy meme instantly with custom text, fonts, and colors. The best city boy meme maker in 2026. No signup, no watermarks!";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "City Boy Meme - Free Online Meme Maker",
+    default: "City Boy Meme - Free Online Meme Maker 2026",
     template: "%s | City Boy Meme"
   },
   description: siteDescription,
   keywords: [
     "city boy meme",
+    "city boy meme generator",
+    "city boy meme maker",
     "meme generator",
     "free meme maker",
     "online meme creator",
-    "city boy meme maker",
-    "meme templates"
+    "viral meme 2026",
+    "meme templates",
+    "city boy meme template",
+    "trending meme"
   ],
   authors: [{ name: "City Boy Meme" }],
   creator: "City Boy Meme",
@@ -39,7 +43,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: siteName,
-    title: "City Boy Meme Generator - Free Online Meme Maker",
+    title: "City Boy Meme Generator - Free Online Meme Maker 2026",
     description: siteDescription,
     images: [
       {
@@ -52,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "City Boy Meme Generator - Free Online Meme Maker",
+    title: "City Boy Meme Generator - Free Online Meme Maker 2026",
     description: siteDescription,
     images: [`${siteUrl}/logo.png`],
   },
